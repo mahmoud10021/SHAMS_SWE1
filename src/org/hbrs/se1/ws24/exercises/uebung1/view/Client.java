@@ -1,4 +1,7 @@
+
 package org.hbrs.se1.ws24.exercises.uebung1.view;
+
+import org.hbrs.se1.ws24.exercises.uebung1.control.Translator;
 
 public class Client {
 
@@ -7,6 +10,14 @@ public class Client {
 		 * (auch bezeichnet als CLI, Terminal)
 		 *
 		 */
+	    private Translator translator;
+
+		public Client(Translator translator) {
+			this.translator = translator;
+
+		}
+
+
 		 void display( int aNumber ){
 			// In dieser Methode soll die Methode translateNumber
 			// mit dem übergegebenen Wert der Variable aNumber
@@ -14,8 +25,8 @@ public class Client {
 			//
 			// Strenge Implementierung (nur) gegen das Interface Translator gewuenscht!
 
-			 System.out.println("Das Ergebnis der Berechnung: " +
-					"[das Ergebnis an dieser Stelle]" );
+			  String erg=translator.translateNumber(aNumber);
+			 System.out.println("Das Ergebnis der Berechnung: " +erg);
 
 		 }
 }
