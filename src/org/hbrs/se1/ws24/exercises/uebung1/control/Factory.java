@@ -7,14 +7,13 @@ public class Factory {
 
     public static GermanTranslator erzeugeTranslator() {
 
-            GermanTranslator translator = new GermanTranslator();
+        // Vorteil hier: der Typ kann hier und auch NUR hier ausgetauscht werden
+        // Auch die Objektparametrisierung (z.B. das initiale Setzen eines Datums)
+        // kann zentral organisiert werden
+        GermanTranslator translator = new GermanTranslator();
+        translator.setDate("11-11-2020");
+        return translator;
 
-            LocalDate datum = LocalDate.now();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM/yyyy");
-            String formattedDate = datum.format(formatter);
-            translator.setDate(formattedDate);
-
-            return translator;
     }
 
 

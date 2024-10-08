@@ -8,8 +8,12 @@ public class Main {
 
         public static void main(String[] args) {
             Translator germanTranslator = Factory.erzeugeTranslator();
+
+            // Der Client wird mit dem Translator-Objekt initialisiert
              Client client = new Client(germanTranslator);
-            client.display(1);
+
+            // Der Client nutzt die display-Methode, um die Übersetzung anzuzeigen
+            client.display(1);  // Beispiel: Die Zahl 1 wird übersetzt
         }
 
 
