@@ -12,7 +12,9 @@ public class Factory {
         // kann zentral organisiert werden
         GermanTranslator translator = new GermanTranslator();
         translator.setDate("11-11-2020");
+        System.out.println("Dient nur zum test commit neues Semester unabhängig von der lösung");
         return translator;
+
 
     }
 
